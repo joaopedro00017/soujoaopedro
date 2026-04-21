@@ -50,11 +50,11 @@ export default function Header() {
           {/* ── Logo ─────────────────────────────── */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/Logo_JP_Oficial.png"
+              src="/images/Logo_JP_Oficial1.png"
               alt="Logo JP"
               width={72}
               height={72}
-              className="w-[72px] h-[72px] transition-transform duration-200 hover:scale-105 select-none pointer-events-none"
+              className="w-[42px] h-[42px] transition-transform duration-200 hover:scale-105 select-none pointer-events-none"
             />
           </Link>
 

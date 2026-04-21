@@ -284,14 +284,14 @@ export default function Home() {
               {projetosDestaque.map((proj, i) => (
                 <div
                   key={i}
-                  className="select-none pointer-events-none bg-white p-4 rounded-[10px] shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-1.5 text-center w-full max-w-[360px] md:max-w-sm"
+                  className=" bg-white p-4 rounded-[10px] shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-1.5 text-center w-full max-w-[360px] md:max-w-sm"
                 >
                   <Image
                     src={proj.img}
                     alt={proj.titulo}
                     width={400}
                     height={200}
-                    className="w-full rounded-[10px]"
+                    className="select-none pointer-events-none w-full rounded-[10px]"
                   />
                   <h3 className="my-2.5 text-[#222] font-bold">
                     {proj.titulo}
@@ -310,7 +310,7 @@ export default function Home() {
         </section>
 
         {/* ── Formulário ────────────────────────────────────────── */}
-        <ContatoForm redirectUrl="https://joaopedro00017.github.io/portifolio/html/tanks.html" />
+        <ContatoForm redirectUrl="https://soujoaopedro.vercel.app/obrigado" />
       </main>
       <Footer />
     </>
