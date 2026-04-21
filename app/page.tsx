@@ -10,7 +10,7 @@ import {
   BsCodeSlash,
   BsDatabase,
 } from "react-icons/bs";
-import { SiPhp, SiSpring, SiDotnet } from "react-icons/si";
+import { SiPhp, SiSpring, SiDotnet, SiTypescript } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -54,10 +54,10 @@ const especialidades = [
       "Conhecimento em Java com Spring Boot para construir APIs RESTful robustas e escaláveis, aplicando boas práticas de arquitetura e desenvolvimento back-end.",
   },
   {
-    icon: <SiSpring className="text-[78px] text-[#6DB33F]" />,
-    titulo: "Spring Boot",
+    icon: <SiTypescript className="text-[78px]" />,
+    titulo: "TypeScript",
     descricao:
-      "Experiência com Spring Boot para criação de microsserviços e APIs, explorando recursos como injeção de dependência, segurança e integração com bancos de dados.",
+      "Experiência com TypeScript para desenvolver aplicações mais seguras e manuteníveis, explorando recursos como tipagem estática, interfaces e generics.",
   },
   {
     icon: <TbBrandCSharp className="text-[78px] text-[#512BD4]" />,
@@ -102,6 +102,22 @@ const socialLinks = [
 /* ── Componente ─────────────────────────────────────────────────── */
 
 export default function Home() {
+  // Função para calcular a idade
+  // Adicione ": string" após o nome do parâmetro
+  const calcularIdade = (dataNascimento: string): number => {
+    const hoje = new Date();
+    const nascimento = new Date(dataNascimento);
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const mes = hoje.getMonth() - nascimento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+      idade--;
+    }
+    return idade;
+  };
+
+  const minhaIdade = calcularIdade("2009-05-15");
+
   return (
     <>
       <Header />
@@ -125,11 +141,12 @@ export default function Home() {
                 <p className="text-[#2e2e2e] text-[22px] md:text-base my-8 md:my-10">
                   Sou desenvolvedor Full-Stack apaixonado por criar soluções
                   inovadoras que conectam tecnologia e experiência do usuário.
-                  Com experiência em Java, Spring, HTML, CSS, JavaScript, C#,
-                  PHP, Angular e React.js, tenho habilidades para construir
-                  aplicações robustas, tanto no front-end quanto no back-end.
-                  Minha prioridade é desenvolver códigos limpos, funcionais e
-                  escaláveis, sempre alinhados às melhores práticas de mercado.
+                  Com experiência em Java, Spring, HTML, CSS, JavaScript,
+                  TypeScript, C#, PHP, Angular e Next.js, tenho habilidades para
+                  construir aplicações robustas, tanto no front-end quanto no
+                  back-end. Minha prioridade é desenvolver códigos limpos,
+                  funcionais e escaláveis, sempre alinhados às melhores práticas
+                  de mercado.
                 </p>
                 <Link href="#formulario">
                   <button className="px-10 py-2.5 text-lg font-semibold bg-white text-[#2e2e2e] rounded-[30px] cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-[0_0_8px_#1b1b1b] border-none">
@@ -225,17 +242,17 @@ export default function Home() {
                   </span>
                 </h2>
                 <p className="my-5 text-[22px] md:text-base text-left">
-                  Sou um jovem programador de 15 anos, residente em Belo
-                  Horizonte, com formação em Assistente de Programação Web pelo
-                  curso de aprendizagem do Senai. Durante o curso, desenvolvi
-                  habilidades fundamentais, incluindo HTML, CSS, JavaScript, PHP
-                  e SQL, que me permitiram criar aplicações web funcionais e bem
-                  estruturadas.
+                  Sou um jovem programador de {minhaIdade} anos, residente em
+                  Belo Horizonte, com formação em Assistente de Programação Web
+                  pelo curso de aprendizagem do Senai. Durante o curso,
+                  desenvolvi habilidades fundamentais, incluindo HTML, CSS,
+                  JavaScript, PHP e SQL, que me permitiram criar aplicações web
+                  funcionais e bem estruturadas.
                 </p>
                 <p className="my-5 text-[22px] md:text-base text-left">
                   Além disso, expandi meu conhecimento de forma independente,
                   aprendendo ferramentas como Java, Spring, C#, Angular e
-                  React.js, ampliando minha capacidade de desenvolver aplicações
+                  Next.js, ampliando minha capacidade de desenvolver aplicações
                   robustas e escaláveis.
                 </p>
 
