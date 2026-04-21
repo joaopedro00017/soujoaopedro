@@ -1,67 +1,67 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import ContatoForm from '@/components/ContatoForm'
+import type { Metadata } from "next";
+import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ContatoForm from "@/components/ContatoForm";
 
 export const metadata: Metadata = {
-  title: 'Projetos - João Pedro',
-}
+  title: "Projetos - João Pedro",
+};
 
 const projetos = [
   {
-    img: '/images/projeto_ballon_dor.png',
-    titulo: 'Jogo Da Velha',
+    img: "/images/projeto_ballon_dor.png",
+    titulo: "Jogo Da Velha",
     descricao:
-      'Jogo da Velha com a Temática da Bola de Ouro 2024 disputada por Rodri e Vini Jr.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/joaopedro00017/JogoDaVelha/',
-    demo: 'https://joaopedro00017.github.io/JogoDaVelha/',
+      "Jogo da Velha com a Temática da Bola de Ouro 2024 disputada por Rodri e Vini Jr.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/joaopedro00017/JogoDaVelha/",
+    demo: "https://joaopedro00017.github.io/JogoDaVelha/",
   },
   {
-    img: '/images/projeto_frase_biblica.png',
-    titulo: 'Frases Bíblicas',
-    descricao: 'Retorna uma Frase Bíblica Aleatória ao ser solicitada.',
-    tecnologias: ['Java Spring', 'MySql'],
-    github: 'https://github.com/joaopedro00017/frases_biblicas/',
+    img: "/images/projeto_frase_biblica.png",
+    titulo: "Frases Bíblicas",
+    descricao: "Retorna uma Frase Bíblica Aleatória ao ser solicitada.",
+    tecnologias: ["Java Spring", "MySql"],
+    github: "https://github.com/joaopedro00017/frases_biblicas/",
     demo: null,
   },
   {
-    img: '/images/projeto_senai.png',
-    titulo: 'Senai CTTI',
+    img: "/images/projeto_senai.png",
+    titulo: "Senai CTTI",
     descricao:
-      'Projeto utilizado na disputa do hackathon do SenaiCTTI para a criação do site da instituição.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    github: 'https://github.com/joaopedro00017/SenaiCTTIT/',
-    demo: 'https://joaopedro00017.github.io/SenaiCTTIT/',
+      "Projeto utilizado na disputa do hackathon do SenaiCTTI para a criação do site da instituição.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    github: "https://github.com/joaopedro00017/SenaiCTTIT/",
+    demo: "https://joaopedro00017.github.io/SenaiCTTIT/",
   },
   {
-    img: '/images/projeto_calculadora.png',
-    titulo: 'Calculadora',
-    descricao: 'Uma calculadora capaz de realizar operações básicas.',
-    tecnologias: ['HTML', 'CSS', 'JavaScript'],
-    github: 'https://github.com/joaopedro00017/calculadora/',
-    demo: 'https://joaopedro00017.github.io/calculadora/',
+    img: "/images/projeto_calculadora.png",
+    titulo: "Calculadora",
+    descricao: "Uma calculadora capaz de realizar operações básicas.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/joaopedro00017/calculadora/",
+    demo: "https://joaopedro00017.github.io/calculadora/",
   },
   {
-    img: '/images/projeto_to-do-list.png',
-    titulo: 'To-do-List',
+    img: "/images/projeto_to-do-list.png",
+    titulo: "To-do-List",
     descricao:
-      'Um gerenciador de tarefas simples e intuitivo desenvolvido com React.js. Crie, visualize, conclua e exclua tarefas de forma prática e eficiente!',
-    tecnologias: ['React.js', 'Tailwind', 'Lucide'],
-    github: 'https://github.com/joaopedro00017/to-do-list/',
-    demo: 'https://to-do-list-indol-nine-68.vercel.app/',
+      "Um gerenciador de tarefas simples e intuitivo desenvolvido com React.js. Crie, visualize, conclua e exclua tarefas de forma prática e eficiente!",
+    tecnologias: ["React.js", "Tailwind", "Lucide"],
+    github: "https://github.com/joaopedro00017/to-do-list/",
+    demo: "https://to-do-list-indol-nine-68.vercel.app/",
   },
   {
-    img: '/images/projeto_cadastro.png',
-    titulo: 'Cadastro de Usuários',
+    img: "/images/projeto_cadastro.png",
+    titulo: "Cadastro de Usuários",
     descricao:
-      'Sistema fullstack para cadastro e gerenciamento de usuários com React, Node.js, Prisma e MongoDB.',
-    tecnologias: ['React.js', 'Node.js', 'Prisma + MongoDB'],
-    github: 'https://github.com/joaopedro00017/cadastro-usuario/',
+      "Sistema fullstack para cadastro e gerenciamento de usuários com React, Node.js, Prisma e MongoDB.",
+    tecnologias: ["React.js", "Node.js", "Prisma + MongoDB"],
+    github: "https://github.com/joaopedro00017/cadastro-usuario/",
     demo: null,
   },
-]
+];
 
 export default function ProjetosPage() {
   return (
@@ -90,7 +90,7 @@ export default function ProjetosPage() {
                   alt={proj.titulo}
                   width={400}
                   height={220}
-                  className="w-full rounded-[10px]"
+                  className="w-full rounded-[10px] select-none pointer-events-none"
                 />
                 <h3 className="my-2.5 text-[#222] font-bold">{proj.titulo}</h3>
                 <p className="text-sm text-[#555]">{proj.descricao}</p>
@@ -138,5 +138,5 @@ export default function ProjetosPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

@@ -157,7 +157,8 @@ export default function Home() {
                   alt="João Pedro"
                   width={450}
                   height={450}
-                  className="w-[260px] h-[260px] md:w-[450px] md:h-[450px] rounded-full bg-[#1b1b1b11] animate-flutuar"
+                  draggable={false}
+                  className="select-none pointer-events-none w-[260px] h-[260px] md:w-[450px] md:h-[450px] rounded-full bg-[#1b1b1b11] animate-flutuar"
                 />
               </div>
             </div>
@@ -223,7 +224,7 @@ export default function Home() {
                   className="
                     w-full h-auto md:w-[600px] md:h-[600px]
                     rounded-full bg-[#22625f]
-                    md:rounded-[25%] md:bg-transparent
+                    md:rounded-[25%] md:bg-transparent select-none pointer-events-none
                   "
                 />
               </div>
@@ -283,7 +284,7 @@ export default function Home() {
               {projetosDestaque.map((proj, i) => (
                 <div
                   key={i}
-                  className="bg-white p-4 rounded-[10px] shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-1.5 text-center w-full max-w-[360px] md:max-w-sm"
+                  className="select-none pointer-events-none bg-white p-4 rounded-[10px] shadow-[0_4px_8px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-1.5 text-center w-full max-w-[360px] md:max-w-sm"
                 >
                   <Image
                     src={proj.img}

@@ -54,7 +54,7 @@ export default function Header() {
               alt="Logo JP"
               width={72}
               height={72}
-              className="w-[72px] h-[72px] transition-transform duration-200 hover:scale-105"
+              className="w-[72px] h-[72px] transition-transform duration-200 hover:scale-105 select-none pointer-events-none"
             />
           </Link>
 
@@ -119,7 +119,7 @@ export default function Header() {
             alt="Logo JP"
             width={52}
             height={52}
-            className="w-[52px] h-[52px]"
+            className="w-[42px] h-[42px] select-none pointer-events-none"
           />
           <button
             onClick={() => setMenuOpen(false)}

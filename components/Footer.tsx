@@ -1,32 +1,43 @@
-import Image from 'next/image'
+import Image from "next/image";
 import {
   BsInstagram,
   BsLinkedin,
   BsGithub,
   BsEnvelopeFill,
   BsStarFill,
-} from 'react-icons/bs'
+} from "react-icons/bs";
 
 const socialLinks = [
-  { href: 'https://www.instagram.com/jaopedrodia017/?__pwa=1',         label: 'Instagram', icon: <BsInstagram /> },
-  { href: 'https://www.linkedin.com/in/jo%C3%A3o-pedro-dias-andrade/', label: 'LinkedIn',  icon: <BsLinkedin /> },
-  { href: 'https://github.com/joaopedro00017',                         label: 'GitHub',    icon: <BsGithub /> },
-]
+  {
+    href: "https://www.instagram.com/jaopedrodia017/?__pwa=1",
+    label: "Instagram",
+    icon: <BsInstagram />,
+  },
+  {
+    href: "https://www.linkedin.com/in/jo%C3%A3o-pedro-dias-andrade/",
+    label: "LinkedIn",
+    icon: <BsLinkedin />,
+  },
+  {
+    href: "https://github.com/joaopedro00017",
+    label: "GitHub",
+    icon: <BsGithub />,
+  },
+];
 
 export default function Footer() {
   return (
     <footer className="py-10 px-[4%] shadow-[0_0_40px_10px_#1b1b1b] bg-[#1b1b1b]">
       <div className="max-w-[1280px] mx-auto">
-
         {/* Linha superior: logo + redes sociais */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-[30px] py-5 text-center md:text-left">
           <div>
             <Image
-              src="/images/Logo_JP_Oficial_branca.png"
+              src="/images/Logo_JP_Oficial_branca0.png"
               alt="JP Logo"
               width={120}
               height={120}
-              className="w-[120px] h-[120px] mx-auto md:mx-0"
+              className="w-[120px] h-[120px] mx-auto md:mx-0 select-none pointer-events-none"
             />
           </div>
           <div className="flex items-center justify-center gap-1">
@@ -58,8 +69,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-
       </div>
     </footer>
-  )
+  );
 }
