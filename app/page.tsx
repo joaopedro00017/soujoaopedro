@@ -18,52 +18,47 @@ import { TbBrandCSharp } from "react-icons/tb";
 
 const especialidades = [
   {
-    icon: <BsCodeSlash className="text-[78px] text-black" />,
-    titulo: (
-      <>
-        <span className="text-[#00ff7f]">HTML</span> /{" "}
-        <span className="text-[#00ff7f]">CSS</span> /{" "}
-        <span className="text-[#00ff7f]">JS</span>
-        <br />+ <span className="text-[#00ff7f]">Angular</span> &amp;{" "}
-        <span className="text-[#00ff7f]">React.js</span>
-      </>
-    ),
+    categoria: "Frontend",
+    icon: <BsCodeSlash className="text-[78px]" />,
+    titulo: "Web Moderno",
     descricao:
-      "Experiência em HTML e CSS para criar interfaces responsivas, domínio em JavaScript para funcionalidades dinâmicas e uso de Angular e React.js para desenvolver aplicações escaláveis e modernas com foco em qualidade e usabilidade.",
+      "Criação de interfaces responsivas com Next.js e Angular, focando em performance e na melhor experiência para o usuário.",
   },
   {
-    icon: <SiPhp className="text-[78px]" />,
-    titulo: "PHP",
-    descricao:
-      "Experiência em PHP para desenvolver aplicações web dinâmicas, focando em eficiência, escalabilidade e integração com bancos de dados, sempre seguindo boas práticas de desenvolvimento.",
-  },
-  {
-    icon: <BsDatabase className="text-[78px] text-black" />,
-    titulo: "SQL",
-    descricao:
-      "Domínio em SQL para gerenciar e otimizar bancos de dados, criando consultas eficientes, estruturadas e focadas na integridade e performance dos dados.",
-  },
-  {
-    icon: <FaJava className="text-[78px]" />,
-    titulo: (
-      <>
-        Java &amp; <span className="text-[#00ff7f]">Spring</span>
-      </>
-    ),
-    descricao:
-      "Conhecimento em Java com Spring Boot para construir APIs RESTful robustas e escaláveis, aplicando boas práticas de arquitetura e desenvolvimento back-end.",
-  },
-  {
+    categoria: "Fullstack",
     icon: <SiTypescript className="text-[78px]" />,
     titulo: "TypeScript",
     descricao:
-      "Experiência com TypeScript para desenvolver aplicações mais seguras e manuteníveis, explorando recursos como tipagem estática, interfaces e generics.",
+      "Uso de tipagem avançada para criar códigos mais seguros, fáceis de manter e com menos bugs em larga escala.",
   },
   {
-    icon: <TbBrandCSharp className="text-[78px] text-[#512BD4]" />,
-    titulo: "C Sharp",
+    categoria: "Database",
+    icon: <BsDatabase className="text-[78px]" />,
+    titulo: "SQL & Dados",
     descricao:
-      "Domínio em C# para desenvolver aplicações versáteis e eficientes, utilizando conceitos de orientação a objetos e boas práticas para garantir performance e qualidade no código.",
+      "Modelagem e otimização de bancos de dados para garantir que a informação esteja sempre segura e rápida.",
+  },
+  {
+    categoria: "Backend",
+    icon: <FaJava className="text-[78px]" />,
+    titulo: "Java & Spring",
+    descricao:
+      "Desenvolvimento de APIs RESTful robustas e escaláveis, utilizando Spring Boot e arquiteturas modernas de back-end.",
+  },
+
+  {
+    categoria: "Backend",
+    icon: <SiPhp className="text-[78px]" />,
+    titulo: "PHP",
+    descricao:
+      "Aplicações dinâmicas com foco em integração de servidores e gestão de conteúdo eficiente.",
+  },
+  {
+    categoria: "Backend",
+    icon: <TbBrandCSharp className="text-[78px]" />,
+    titulo: "C# & .NET",
+    descricao:
+      "Construção de softwares versáteis com orientação a objetos, explorando o poder do ecossistema Microsoft.",
   },
 ];
 
@@ -170,40 +165,40 @@ export default function Home() {
         </section>
 
         {/* ── Especialidades ────────────────────────────────────── */}
-        <section className="py-10 px-[8%] md:px-[4%]">
+        <section className="py-20 px-[4%]">
           <div className="max-w-[1280px] mx-auto">
-            <h2 className="text-[#1b1b1b] text-[30px] md:text-[38px] leading-[34px] md:leading-normal text-center font-bold">
-              MINHAS <span className="text-[#00ff7f]">ESPECIALIDADES.</span>
-            </h2>
-
-            {/* Linha 1 — empilha em mobile, 3 colunas no desktop */}
-            <div className="flex flex-col md:flex-row gap-0 md:gap-[60px]">
-              {especialidades.slice(0, 3).map((esp, i) => (
-                <div
-                  key={i}
-                  className="text-[#1b1b1b] p-10 rounded-[25px] mt-[45px] transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_#1b1b1b6f]"
-                >
-                  {esp.icon}
-                  <h3 className="text-[26px] my-[15px] font-bold">
-                    {esp.titulo}
-                  </h3>
-                  <p>{esp.descricao}</p>
-                </div>
-              ))}
+            <div className="text-center mb-16">
+              <h2 className="text-[#1b1b1b] text-[35px] md:text-[45px] font-bold">
+                MINHAS <span className="text-[#00ff7f]">ESPECIALIDADES.</span>
+              </h2>
+              <p className="text-gray-600 mt-4">
+                Tecnologias que domino para transformar ideias em realidade.
+              </p>
             </div>
 
-            {/* Linha 2 */}
-            <div className="flex flex-col md:flex-row gap-0 md:gap-[60px]">
-              {especialidades.slice(3).map((esp, i) => (
+            {/* Grid Único: 1 coluna no mobile, 2 no tablet, 3 no desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {especialidades.map((esp, i) => (
                 <div
                   key={i}
-                  className="text-[#1b1b1b] p-10 rounded-[25px] mt-[45px] transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_#1b1b1b6f]"
+                  className="relative bg-white border border-gray-100 p-8 rounded-[30px] transition-all duration-300 hover:border-[#00ff7f] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] group"
                 >
-                  {esp.icon}
-                  <h3 className="text-[26px] my-[15px] font-bold">
+                  {/* Tag de Categoria */}
+                  <span className="absolute top-6 right-8 text-[10px] font-bold uppercase tracking-widest text-gray-400 group-hover:text-[#00ff7f] transition-colors">
+                    {esp.categoria}
+                  </span>
+
+                  <div className="mb-6 inline-block p-4 bg-gray-50 rounded-2xl group-hover:bg-[#00ff7f10] transition-colors">
+                    {esp.icon}
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#1b1b1b] mb-4">
                     {esp.titulo}
                   </h3>
-                  <p>{esp.descricao}</p>
+
+                  <p className="text-gray-500 leading-relaxed">
+                    {esp.descricao}
+                  </p>
                 </div>
               ))}
             </div>
