@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  @keyframes flutuar {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 30px;
+    }
+  }
+
+  .animate-flutuar {
+    animation: flutuar 2s ease-in-out infinite alternate;
+    position: relative;
+  }
+}
